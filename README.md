@@ -17,7 +17,7 @@ European Sociological Review, vol. jcac026, 2022, doi: 10.1093/esr/jcac026.
 
 ## Descriptions of data sets
 
-Description of network data sets (in Dutch):
+### Description of network data sets (in Dutch):
 
 **Family layer**: <https://www.cbs.nl/nl-nl/onze-diensten/maatwerk-en-microdata/microdata-zelf-onderzoek-doen/microdatabestanden/familienetwerktab-familierelaties>
 
@@ -29,4 +29,13 @@ Description of network data sets (in Dutch):
 
 **School layer**: <https://www.cbs.nl/nl-nl/onze-diensten/maatwerk-en-microdata/microdata-zelf-onderzoek-doen/microdatabestanden/klasgenotennetwerktab-klasgenotenrelaties>
 
+
+### Educational level (in Dutch):
+
+<https://www.cbs.nl/nl-nl/onze-diensten/maatwerk-en-microdata/microdata-zelf-onderzoek-doen/microdatabestanden/hoogsteopltab-hoogst-behaald-gevolgd-opleidingsniveau>
+
+
+### Microdata access
+
+<https://www.cbs.nl/en-gb/our-services/customised-services-microdata/microdata-conducting-your-own-research>
 
