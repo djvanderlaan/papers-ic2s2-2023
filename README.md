@@ -19,14 +19,14 @@ European Sociological Review, vol. jcac026, 2022, doi: 10.1093/esr/jcac026.
 
 Description of network data sets (in Dutch):
 
-**Family layer**: <https://www.cbs.nl/nl‐nl/onze‐diensten/maatwerk‐en‐microdata/microdata‐zelf‐onderzoek‐doen/microdatabestanden/familienetwerktab‐familierelaties>
+**Family layer**: <https://www.cbs.nl/nl-nl/onze-diensten/maatwerk-en-microdata/microdata-zelf-onderzoek-doen/microdatabestanden/familienetwerktab-familierelaties>
 
-**Work layer**: <https://www.cbs.nl/nl‐nl/onze‐diensten/maatwerk‐en‐microdata/microdata‐zelf‐onderzoek‐doen/microdatabestanden/colleganetwerktab‐collegarelaties>
+**Work layer**: <https://www.cbs.nl/nl-nl/onze-diensten/maatwerk-en-microdata/microdata-zelf-onderzoek-doen/microdatabestanden/colleganetwerktab-collegarelaties>
 
-**Neighbours layer**: <https://www.cbs.nl/nl‐nl/onze‐diensten/maatwerk‐en‐microdata/microdata‐zelf‐onderzoek‐doen/microdatabestanden/burennetwerktab‐buren‐en‐buurtgenotenrelaties>
+**Neighbours layer**: <https://www.cbs.nl/nl-nl/onze-diensten/maatwerk-en-microdata/microdata-zelf-onderzoek-doen/microdatabestanden/burennetwerktab-buren-en-buurtgenotenrelaties>
 
-**Household layer**: <https://www.cbs.nl/nl‐nl/onze‐diensten/maatwerk‐en‐microdata/microdata‐zelf‐onderzoek‐doen/microdatabestanden/huisgenotennetwerktab‐huisgenotenrelaties>
+**Household layer**: <https://www.cbs.nl/nl-nl/onze-diensten/maatwerk-en-microdata/microdata-zelf-onderzoek-doen/microdatabestanden/huisgenotennetwerktab-huisgenotenrelaties>
 
-**School layer**: <https://www.cbs.nl/nl‐nl/onze‐diensten/maatwerk‐en‐microdata/microdata‐zelf‐onderzoek‐doen/microdatabestanden/klasgenotennetwerktab‐klasgenotenrelaties>
+**School layer**: <https://www.cbs.nl/nl-nl/onze-diensten/maatwerk-en-microdata/microdata-zelf-onderzoek-doen/microdatabestanden/klasgenotennetwerktab-klasgenotenrelaties>
 
 
