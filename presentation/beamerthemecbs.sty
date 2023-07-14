@@ -1,0 +1,150 @@
+\mode<presentation>
+% Nodig om math fonts te laten werken
+\usefonttheme{professionalfonts}
+
+\usepackage{tikz}
+\usetikzlibrary{positioning}
+
+% ==== Definieer de CBS kleuren ====
+\RequirePackage{xcolor}
+% hoofdkleuren
+\definecolor{corporateblauw}{RGB}{39,29,108}
+\definecolor{corporatelichtblauw}{RGB}{0,161,205}
+\definecolor{lichtgrijs}{RGB}{236,236,236}
+% aanvullende kleuren
+\definecolor{geel}{RGB}{255,204,0}
+\definecolor{geelvergrijsd}{RGB}{255,182,0}
+\definecolor{oranje}{RGB}{243,146,0}
+\definecolor{oranjevergrijsd}{RGB}{206,124,0}
+\definecolor{rood}{RGB}{233,76,10}
+\definecolor{roodvergrijsd}{RGB}{178,61,2}
+\definecolor{roze}{RGB}{175,14,128}
+\definecolor{rozevergrijsd}{RGB}{130,4,94}
+\definecolor{donkerblauw}{RGB}{0,88,184}
+\definecolor{donkerblauwvergrijsd}{RGB}{22,58,114}
+\definecolor{lichtblauwvergrijsd}{RGB}{5,129,162}
+\definecolor{grasgroen}{RGB}{83,163,29}
+\definecolor{grasgroenvergrijsd}{RGB}{72,130,37}
+\definecolor{appelgroen}{RGB}{175,203,5}
+\definecolor{appelgroenvergrijsd}{RGB}{137,157,12}
+
+
+% ==== Kleuren schema ====
+\colorlet{cbs1}{corporatelichtblauw}
+\colorlet{cbs2}{corporateblauw}
+
+\colorlet{cbsbasis}{cbs1}
+\colorlet{cbstekst}{cbs2}
+\colorlet{cbsachtergrond}{white}
+
+\newcommand{\invert}{
+  \colorlet{cbsbasis}{white}
+  \colorlet{cbstekst}{white}
+  \colorlet{cbsachtergrond}{cbs1}
+  \usebeamercolor[fg]{normal text}
+}
+\newcommand{\revert}{
+  \colorlet{cbsbasis}{cbs1}
+  \colorlet{cbstekst}{cbs2}
+  \colorlet{cbsachtergrond}{white}
+  \usebeamercolor[fg]{normal text}
+}
+
+
+% ==== Stel de fonts in ==== 
+% Maak het document op in Colibri
+\RequirePackage{fontspec}
+\setmainfont[Numbers={Lining}]{Calibri}
+% Code/mono
+\setmonofont[Scale=MatchLowercase]{Consolas}
+% Math
+\RequirePackage[bold-style=ISO]{unicode-math}
+\setmathfont{Cambria Math}
+
+% ==== Lijsten ====
+\setbeamercolor{enumerate item}{fg=cbstekst}
+\setbeamercolor{enumerate subitem}{fg=cbstekst}
+\setbeamercolor{enumerate subsubitem}{fg=cbstekst}
+\setbeamertemplate{enumerate items}[default]
+\setbeamertemplate{enumerate subitem}{\insertsubenumlabel}
+\setbeamertemplate{enumerate subsubitem}{\insertsubsubenumlabel}
+
+\setbeamercolor{itemize item}{fg=cbstekst}
+\setbeamercolor{itemize subitem}{fg=cbstekst}
+\setbeamercolor{itemize subsubitem}{fg=cbstekst}
+\setbeamertemplate{itemize item}{—}
+\setbeamertemplate{itemize subitem}{—}
+\setbeamertemplate{itemize subsubitem}{—}
+
+%\colorlet{cbsachtergrond}{corporatelichtblauw}
+%\colorlet{cbstekst}{white}
+%\colorlet{cbsbasis}{white}
+%\color{white}
+%\setbeamercolor{normal text}{fg=white}
+\setbeamercolor{itemize/enumerate body begin}{fg=white}
+
+
+% ==== Kleurtjes rondom slides ==== 
+%\setbeamercolor{sidebar}{bg=cbsbasis}
+%\setbeamersize{sidebar width right=0.4cm}
+\setbeamercolor{background canvas}{bg=cbsachtergrond}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercolor{normal text}{fg=cbstekst}
+
+% ==== Slide titel ====
+\setbeamercolor{frametitle}{fg=cbsbasis, bg=cbsachtergrond}
+\setbeamertemplate{frametitle}{%
+  \vskip8mm
+  \bfseries\LARGE\insertframetitle
+}
+
+% ==== Slide voet ====
+\setbeamercolor{footline}{bg=cbsachtergrond, fg=cbstekst}
+
+\setbeamertemplate{footline}{
+  % we willen alles rechts hebben
+  \hfill
+  % voeg framenumber toe; til 4 mm op zodat hij niet op de onderlijn staat
+  \raisebox{4mm}{\scriptsize\insertinstitute\hspace{2em}\insertframenumber}
+  % Voeg op het eind nog wat space toe zodat nummer niet helemaal rechts
+  % staat, maar iets naar links komt; onder logo
+  \hspace{7mm}
+  % voeg blauwe balk rechts met logo toe
+  \begin{tikzpicture}[remember picture, overlay]
+    % logo
+    \node[rounded corners=1mm, fill=white, inner sep=1mm, outer sep=0mm, 
+        anchor=south east, text ragged, shift={(0cm, 1cm)}] at (current page.south east) {
+      \noindent\hspace*{1mm}\includegraphics[height=7.5mm]{cbs.pdf}\hspace*{6mm}
+    };
+    % balk
+    \node[shift={(-4mm,0)}] at (current page.south east) { 
+      \begin{tikzpicture}[remember picture, overlay]
+        \draw[cbsbasis, fill=cbsbasis] (0,0) rectangle (4mm, \paperheight);
+      \end{tikzpicture}
+    };
+  \end{tikzpicture}
+}
+
+% ==== Titelpagina ====
+
+\setbeamertemplate{title page}{%
+  % voeg blauwe balk rechts toe
+  \begin{tikzpicture}[remember picture, overlay]
+    \node[shift={(-4mm,0)}] at (current page.south east) { 
+      \begin{tikzpicture}[remember picture, overlay]
+        \draw[cbsbasis, fill=cbsbasis] (0,0) rectangle (4mm, \paperheight);
+      \end{tikzpicture}
+    };
+  \end{tikzpicture}
+  % logo
+  \includegraphics[height=25mm]{cbs.pdf}\par
+  % titel
+  \vspace{1em}\LARGE\bf\color{cbstekst}\inserttitle\par
+  % subtitel
+  \vspace{\stretch{1}}\Large\rm\color{cbsbasis}\insertsubtitle\par
+  % auteur
+  \vspace{\stretch{1}}\footnotesize\rm\color{cbstekst}\insertauthor\par
+  % datum
+  \vspace{0.5em}\footnotesize\rm\insertdate\par
+}
+
