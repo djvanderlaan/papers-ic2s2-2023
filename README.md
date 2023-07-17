@@ -2,6 +2,8 @@
 
 Abstract and presentation for the IC2S2 2023 Conference; references and links to descriptions of the used data sets.
 
+This work is part of our work on a dashboard visualising educational segregation:
+<https://dashboards.cbs.nl/v4/opl_segregatie/>.
 
 ## References
 
